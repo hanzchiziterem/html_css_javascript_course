@@ -1,0 +1,65 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/*
+    1. Default font of all browsers is 16px;
+    2. It is advice not to use absolute units for measurement
+    to enable dynamic sizing acriss different browser.
+
+
+*/
+
+html {
+    /* font-size: 16px; nothing happens. */
+}
+
+/* 
+
+    1. Width by default is 100%
+    2. Width is relative that means the child being 100% takes
+       up all the space in the parent element.
+
+       Typical Example
+
+*/
+
+/*
+    Body is not always the full page but you can make it the
+    full page with vh, use "min-height" to avoid content out growing 
+    the page. 
+*/
+body {
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+}
+
+h1 {
+    width: 50%;
+    border: 2px dashed red;
+    font-size: 3rem;
+    padding: .5em; /*1em = 3rem*/
+}
+
+/*
+    Relative Units.
+    1. rem(root element) 1rem = 16px; for font-sizes.
+    2. em(element) always inherited from parent element.
+    3. ch(character) have a certain width based of a character size.
+        (use in magazines)
+*/
+
+main {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 0.7em;
+    width: 40ch;
+}
