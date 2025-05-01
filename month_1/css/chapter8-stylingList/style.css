@@ -8,5 +8,35 @@ ol {
     /* list-style-type: lower-alpha; */ 
     /* list-style-type: decimal; //default */
     /* list-style-type: georgian; */
-    list-style-type: lower-alpha;
+    /* list-style-type: lower-alpha; */
+    list-style-type: none;
+    padding: 0;
+}
+
+ul {
+    list-style-type: square;
+    /* text-align: center; */
+    line-height: 1.6;
+    /* list-style-image: url(''); to use and image form the bullets*/
+    /* list-style-position: inside; //To get the bullet points to align with the text */
+    /*Short hand*/
+    /* list-style: square url('') inside;//square becomes the fallback;  */
+}
+
+/*
+    * nth child used to access the nth child of list
+    we could pass odd, even.
+*/
+ul li:nth-child(2) {
+    color: red; 
+}
+
+/*
+* makes tge 
+*/
+
+ul ::marker {
+    font-family: fantasy;
+    color: #000;
+    /* content: "Only $5 >>"; // will learn more about it. esp using svgs */
 }
