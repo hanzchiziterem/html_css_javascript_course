@@ -1,0 +1,43 @@
+body {
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*
+Block level elements
+ have default 100% width;
+ we can use padding, margin and even height all 4 corners.
+ stack on each other and create a new line
+     
+Inline level elements
+    don't stack on each other and create a new line.
+*/
+
+/* main {
+    background-color: aqua;
+    width: 50%;
+} */
+
+/*
+limited to thier parent element but 
+have a width of 100% all the time.
+*/
+
+
+p {
+    background-color: lightgray;
+}
+
+/*
+we can't add height because it is an inline element.
+*/
+
+
+.opposite {
+    display: inline-block;
+    padding: 4rem;
+    margin-top: 100px;
+    background-color: #333;
+    height: 200px;
+    color: whitesmoke;
+}
