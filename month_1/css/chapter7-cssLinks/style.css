@@ -1,0 +1,44 @@
+body {
+  padding: 10%;
+  font-family: "Courier New", Courier, monospace;
+}
+
+a {
+  font-style: oblique;
+  cursor: pointer;
+  color: hsl(207, 44%, 49%);
+}
+
+/*
+* Psuedo Classes
+one can overwrite the other so we should mind the order of placement.
+*/
+a:visited {
+}
+
+/*:focus for phone or screen readers*/
+
+/*
+**How to get a color that compliments the color you already have
+use hsl() change only the first value leave the rest eg.
+
+hsl(207, 44%, 49%)
+
+hsl(189, 44%, 49%)
+
+we also have hsla()
+
+*/
+
+main {
+    opacity: 0.4;
+}
+
+a:hover,
+a:focus {
+  color: hsl(189, 44%, 49%);
+  opacity: 0.9; /*Transparency*/
+}
+a:active {
+  color: red;
+}
