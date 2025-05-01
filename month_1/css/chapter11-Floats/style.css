@@ -8,3 +8,38 @@ body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 1.5rem;
 }
+
+.block {
+    width: 30vw;
+    height: 30vw;
+    background-color: #000;
+    color: #fff;
+    padding: 1rem;
+}
+
+/*
+after applying float: left;
+the text was messy because it wrapped up
+
+on instict we'll do
+p {
+    padding-left: 1rem
+}
+
+but this doesn't work so we apply the margin to the .left
+*/
+
+.left {
+    float: left;
+    margin-right: 1rem;
+}
+
+
+.right {
+    float: right;
+    margin-left: 1rem;
+}
+
+.clear {
+    clear: both;
+}
