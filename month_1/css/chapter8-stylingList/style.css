@@ -1,0 +1,12 @@
+body {
+    padding: 5% 10%;
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+ol {
+    /* list-style-type: lower-alpha; */ 
+    /* list-style-type: decimal; //default */
+    /* list-style-type: georgian; */
+    list-style-type: upper-roman;
+}
