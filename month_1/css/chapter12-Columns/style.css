@@ -22,3 +22,15 @@ body {
     break-inside: avoid; /*Prevent something form spliting into 2 in the columns. */
     /* break-before: column; not advisable if you are going to shrink your page. */
 }
+
+.columns .quote {
+    margin-top: 2rem;
+    font-size: 3rem;
+    text-align: center;
+    color: #333;
+    column-span: all;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
