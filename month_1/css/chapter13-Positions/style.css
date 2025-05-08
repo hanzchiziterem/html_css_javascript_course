@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.5rem;
+    min-height: 200vh;
+}
+
+.outer-container {
+    border: 3px dashed #000;
+    width: 75vw;
+    height: 85vh;
+    margin: 40px auto;
+    position: relative;
+}
+.inner-container {
+    border: 2px solid #00f;
+    width: 40vw;
+    height: 50vh;
+    margin: 200px auto;
+    /*using position absolute find the parent that has the postion relative and positions its self accordingly,
+    Note: It picks the closest one that's why inner container was picked.
+    */
+    /* position: relative; */
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    padding: 1rem;
+    color: #fff;
+}
+
+/*The fixed block is over the absolute block right now, 
+that is decided by what element comes first and what element comes last in the html.
+
+instead of changing the html elements postion it is advicable that you use css to correct this
+implementing  "z-index"
+
+*/
+
+
+.absolute {
+    background-color: #00f;
+    /* position: static; default of all elements */
+    position: absolute; /*setting this alone doesn't do anything. */
+    /*It needs one to change where it is at.*/
+    /*Absolute positioning needs a realtive parent,
+    and if it doesn't have an ansector element it is postioned relative to the inital boundry or inital box */
+    top: 0px; /*Default is 0*/
+    left: 0px; /*Default is 0*/
+    z-index: 1;
+}
+
+.relative {
+    background-color: #f00;
+    position: relative;
+    /*Options*/
+    top: 300px;
+    left: 100px;
+}
+
+.fixed {
+    background-color: #0f0;
+    position: fixed;
+    top: 100px;
+}
+
+/*similar to fixed but it will stay in its normal flow till it reaches a place that you have defined.*/
+.sticky {
+background-color: #000;
+position: sticky;
+top: 0;
+}
+
+/*Display none and opacity are really good for accessibility 
+if we need something to be in the html but off the page and still accessible 
+we use position absolute is good for that.
+
+.absolute {
+    background-color: #00f;
+    position: absolute; /*setting this alone doesn't do anything. 
+    left: -10000px
+    z-index:1;
+*/
