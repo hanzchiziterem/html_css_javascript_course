@@ -26,8 +26,9 @@ body {
     short hand for these two
     */
 
+    flex-direction: row-reverse;
   /*remove the wrap to bascially see what flex-shrink does for us.*/
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   align-content: space-evenly; /*this aligns the rows, it will take values like justif content t=but it will align the rowa*/
 }
 
@@ -63,4 +64,14 @@ body {
   /*Basically the same princple with flex grow. */
   /* flex-shrink: 2; */
   flex: 2 2 250px;
+  /*if you are using this order property on indiviual elements and you have row reverse on*/
+  /*
+  more research on this order property.
+  
+  Sometimes reversing the row or column order of a container is not enough. 
+  In these cases, we can apply the order property to individual items. 
+  By default, items have a value of 0, 
+  but we can use this property to also set it to a positive or negative integer value (-2, -1, 0, 1, 2).
+*/
+  order: -1;
 }
