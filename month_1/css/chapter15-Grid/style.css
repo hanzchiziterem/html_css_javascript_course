@@ -1,0 +1,67 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+ font-family: 'Courier New', Courier, monospace;
+ min-height: 100vh;
+}
+
+.container {
+    min-height: 400px;
+    display: grid;
+    /* grid-auto-flow: column; */
+    /* grid-template-columns: 2fr 1fr 1fr; instead of absolute values use fractions or mix them */
+    grid-template-columns: repeat(2,1fr 2fr); /*it doesn't have to be equal but it must have a pattern.*/
+    grid-auto-rows: minmax(150px, auto);
+    /* row-gap: 1em;
+    column-gap: 1em;
+        gap: row column 
+    */
+     gap: 1rem 0.54rem;
+}
+
+.box {
+    background-color: #000;
+    color: #fff;
+    font-size: 2rem;
+    padding: 0.5rem;
+}
+
+.box:first-child {
+    background-color: blue;
+    /* grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3; 
+    short hand
+     propert: start / end;
+    */
+    grid-column: 1 / 4;
+    grid-row: 1 / 3;
+
+    /*We can nest a grid inside of a grid item. */
+    display: grid;
+    /* align-content: center;
+    justify-content: center; 
+    
+    short hand
+    place-content: align-content justify-content;
+    put one value it takes it for both.
+    */
+    place-content: center;
+
+    /* another way to setup up grids 
+        1. named grid items 
+        2. grid-template-areas
+    */
+
+}
+
+.box:nth-child(2) {
+    background-color: purple;
+    grid-column: 1 / 5;
+    grid-row: 3 / 4;
+}
